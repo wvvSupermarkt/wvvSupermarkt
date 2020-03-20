@@ -1,9 +1,12 @@
+# notes
+https://github.com/rak-trzustki/busy-hours/issues/8
+
+
 # API
 
 ## /index.html 
 
 response static ui5 app from ../frontend/webapp/index.html
-
 
 ## /supermarkets?placeId=(placeId)
 response: 
