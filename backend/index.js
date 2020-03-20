@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+
 app.use('/', express.static('../frontend/webapp/'));
 var port = 8080;
 const busy_hours = require('busy-hours');
