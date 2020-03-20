@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 app.use('/', express.static('../frontend/webapp/'));
 var port = 8080;
+const busy_hours = require('busy-hours');
 
 app.listen(8080, function () {
     console.log("Running at port: " + port)
@@ -9,36 +10,27 @@ app.listen(8080, function () {
 
 
 app.get("/supermarkets", function (req, res) {
-    var long = req.query.long
-    var lat = req.query.lat
-    var response = [{
-        lat: lat,
-        long: long,
-        name: "Edeka Kampmann",
-        type: "Supermarkt",
-        "weekday_text": [
-            "Montag: 07:00–22:00 Uhr",
-            "Dienstag: 07:00–22:00 Uhr",
-            "Mittwoch: 07:00–22:00 Uhr",
-            "Donnerstag: 07:00–22:00 Uhr",
-            "Freitag: 07:00–22:00 Uhr",
-            "Samstag: 07:00–22:00 Uhr",
-            "Sonntag: Geschlossen"
-        ],
-        traffic: {
-            mon: [Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random()],
-            tues: [Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random()],
-            wed: [Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random()],
-            thurs: [Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random()],
-            fri: [Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random()],
-            sat: [Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random()],
-            sun: [Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random(), Math.random()]
-        }
-    }]
-
-    res.json(response)
+    var placeId = req.query.placeId;
+    if(placeId){
+        getTrafficByPlaceId(placeId,function(data){
+            res.json([data])
+        });
+    }else{
+         res.statusCode= 422;
+         res.end();
+    }
 })
 
+
+function getTrafficByPlaceId(placeId,cb){
+    busy_hours(placeId, "AIzaSyAT8W6_CJ835UHlpuCjfxcxHrYf7Tecqtk").then(data => {
+        console.log("try log:")
+        console.log(JSON.stringify(data,null,3)); 
+        if(cb){
+            cb(data)
+        }
+     });
+}
 app.post("/traffic", function (req, res) {
     var long = req.query.long
     var lat = req.query.lat
