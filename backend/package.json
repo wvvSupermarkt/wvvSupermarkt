@@ -1,15 +1,26 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "Google Data Proxy for Google Places API",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start:dev": "nodemon --config \"./nodemon.json\"",
+    "build": "tsc",
+    "start": "node ./dist/server.js"
   },
-  "author": "",
+  "author": "wvvSupermarkt",
   "license": "ISC",
   "dependencies": {
     "busy-hours": "0.0.5",
-    "express": "^4.17.1"
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.3",
+    "@types/node-fetch": "^2.5.5",
+    "nodemon": "^2.0.2",
+    "ts-node": "^8.7.0",
+    "typescript": "^3.8.3"
   }
 }

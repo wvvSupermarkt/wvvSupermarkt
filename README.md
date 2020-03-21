@@ -1,3 +1,2 @@
 # wvvSupermarkt
-
-Test
+The Livelane Application
