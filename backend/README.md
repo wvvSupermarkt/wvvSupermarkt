@@ -18,10 +18,9 @@ or
       yarn build
       yarn start
 
-
-Then consume the Supermarkets API like this:
-
-      localhost:<port>/supermarkets?lat=<lat>&lon=<lon>
+### Query
+**Consume the Supermarkets API via this URL**: `localhost:<port>/supermarkets?lat=<lat>&lon=<lon>`,<br>
+for example: `http://localhost:8080/supermarkets?lat=49.315920&lon=8.432910`
 
 ### API Response
 This is an example for the API response you can expect:
