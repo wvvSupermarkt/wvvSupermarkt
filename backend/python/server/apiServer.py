@@ -1,6 +1,8 @@
 import populartimes
 
 from flask import Flask
+from flask import request
+from flask import jsonify
 
 app = Flask(__name__)
 
@@ -14,16 +16,19 @@ def get_popTimesFromPlaceId():
 
 
 @app.route('/populartimesArea', methods=['GET'])
-def get_popTimesFromPlaceId():
+def get_popTimesFromArea():
 
     api_key = request.args.get('api_key')
-    placeType = request.args.get('type')
+    placeType = request.args.get('placeType')
     #TODO: points are of type (float, float); lat/lng of point delimiting the search area; e.g. (48.142199, 11.580047), need to check input
     point1 = request.args.get('p1')
     point2 = request.args.get('p2')
     radius = request.args.get('radius')
 
-    #Eg. populartimes.get("your-api-key", ["bar"], (48.132986, 11.566126), (48.142199, 11.580047))
+    print ('api_key' + api_key)
+    print ('placeType' + placeType)
+
+#    result = populartimes.get("your-api-key", ["bar"], (48.132986, 11.566126), (48.142199, 11.580047))
 
     result = populartimes.get(api_key, [placeType], point1, point2)
 
