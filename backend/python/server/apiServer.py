@@ -31,9 +31,8 @@ def get_popTimesFromArea():
 
 #    result = populartimes.get("your-api-key", ["bar"], (48.132986, 11.566126), (48.142199, 11.580047))
 
-    #result = populartimes.get("AIzaSyAT8W6_CJ835UHlpuCjfxcxHrYf7Tecqtk", ["bar"], (48.132986, 11.566126), (48.142199, 11.580047))
-    result = populartimes.get_id(
-        "AIzaSyAT8W6_CJ835UHlpuCjfxcxHrYf7Tecqtk", "ChIJSYuuSx9awokRyrrOFTGg0GY")
+    result = populartimes.get(api_key, ["bar"], (48.132986, 11.566126), (48.142199, 11.580047))
+
     print(result)
     return jsonify({'result': result})
 
