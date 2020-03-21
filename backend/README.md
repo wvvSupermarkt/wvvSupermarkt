@@ -10,11 +10,13 @@ Copy the `.env.example` file and name it `.env`. Open it and enter your Google A
 
 In order to start the server run the following commands inside the backend folder:
 
+      npm install
       npm run build
       npm run start
 
 or
 
+      yarn install
       yarn build
       yarn start
 
