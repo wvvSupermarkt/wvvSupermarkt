@@ -1,0 +1,79 @@
+{
+  "_from": "busy-hours",
+  "_id": "busy-hours@0.0.5",
+  "_inBundle": false,
+  "_integrity": "sha512-AYEQ5VCmZWg4MqKsLnKHvLnOghlZED8NykP5AgoHmHNmZerqgEtFW7YLpudANush0h89JHx8mi0BybFeYv0AQw==",
+  "_location": "/busy-hours",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "busy-hours",
+    "name": "busy-hours",
+    "escapedName": "busy-hours",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/busy-hours/-/busy-hours-0.0.5.tgz",
+  "_shasum": "d4958c83b88eb0b6069757935994015744764771",
+  "_spec": "busy-hours",
+  "_where": "C:\\Users\\Sauer\\wvvSupermarkt\\backend",
+  "author": {
+    "name": "E",
+    "email": "e@tausendsassa.io"
+  },
+  "babel": {
+    "presets": [
+      "minify"
+    ],
+    "plugins": [
+      "es6-promise"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/rak-trzustki/busy-hours/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@google/maps": "^0.4.5",
+    "axios": "^0.18.0"
+  },
+  "deprecated": false,
+  "description": "Hacky web scraper for retrieving Google Places popular times data",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-es6-promise": "^1.1.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-minify": "^0.2.0",
+    "size-limit": "^0.17.0"
+  },
+  "homepage": "https://github.com/rak-trzustki/busy-hours#readme",
+  "keywords": [
+    "google",
+    "popular times",
+    "places api"
+  ],
+  "license": "WTFPL",
+  "main": "./dist/index.js",
+  "name": "busy-hours",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rak-trzustki/busy-hours.git"
+  },
+  "scripts": {
+    "build": "babel src --presets babel-preset-es2015   --out-dir dist",
+    "prepublish": "npm run build",
+    "size": "size-limit"
+  },
+  "size-limit": [
+    {
+      "path": "./src/index.js"
+    }
+  ],
+  "version": "0.0.5"
+}
