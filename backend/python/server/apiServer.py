@@ -15,23 +15,12 @@ def get_popTimesFromPlaceId():
     return jsonify({'result': result})
 
 
-@app.route('/populartimesArea', methods=['GET'])
-def get_popTimesFromArea():
-
-    api_key = request.args.get('api_key')
-    placeType = request.args.get('placeType')
-    #TODO: points are of type (float, float); lat/lng of point delimiting the search area; e.g. (48.142199, 11.580047), need to check input
-    point1 = request.args.get('p1')
-    point2 = request.args.get('p2')
-    radius = request.args.get('radius')
-
-    print ('api_key ', api_key)
-    print ('placeType ',placeType)
-    print ('point1 ', point1)
-
-#    result = populartimes.get("your-api-key", ["bar"], (48.132986, 11.566126), (48.142199, 11.580047))
-
-    result = populartimes.get(api_key, ["bar"], (48.132986, 11.566126), (48.142199, 11.580047))
+@app.route('/populartimesArea', methods = ['POST'])
+def postJsonHandler():
+    print (request.is_json)
+    content = request.get_json()
+    print (content["p1"][0])
+    result = populartimes.get(content["api_key"], [content["placeType"]], content["p1"], content["p2"],20,content["radius"] )
 
     print(result)
     return jsonify({'result': result})
