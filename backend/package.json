@@ -11,13 +11,14 @@
   "author": "wvvSupermarkt",
   "license": "ISC",
   "dependencies": {
-    "busy-hours": "0.0.5",
+    "@google/maps": "^1.1.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "node-fetch": "^2.6.0"
   },
   "devDependencies": {
     "@types/express": "^4.17.3",
+    "@types/google__maps": "^0.5.12",
     "@types/node-fetch": "^2.5.5",
     "nodemon": "^2.0.2",
     "ts-node": "^8.7.0",

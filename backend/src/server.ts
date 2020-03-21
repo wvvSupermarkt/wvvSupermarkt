@@ -2,7 +2,7 @@ require('dotenv').config();
 import express from 'express';
 const app = express();
 import fetch from 'node-fetch';
-const busyHours = require('busy-hours');
+import { getBusyHours } from './busyHours';
 
 app.get('/', (_req, res) => {
     res.send("This is our supermarket API, go to our GitHub page to find out more about this API");
@@ -17,12 +17,13 @@ app.listen(PORT, () => {
 // TEST //
 //////////
 // app.get("/test", function (_req, res) {
-//     busyHours("ChIJ-YDEJNW2l0cRtNXp2J3dZBg", process.env.GOOGLE_KEY).then((data: any) => {
+//     getBusyHours("ChIJMcjr-KO2l0cR-fUqy24AFgw", process.env.GOOGLE_KEY).then((data: any) => {
 //         console.log(data);
+//         res.send(data);
 //     }).catch((err: any) => {
 //         console.error(err);
+//         res.send(err);
 //     });
-//     res.send('test');
 // });
 
 app.get("/supermarkets", async function (req, res, next) {
@@ -77,17 +78,14 @@ function extractPlaceIds(jsonData: any): string[] {
 //////////////////////////////////////////////////////////////
 // Google Places API (indirectly via npm-module busy-hours) //
 //////////////////////////////////////////////////////////////
-async function enrichPlaceIds(placeIds: string[]): Promise<object> {
-    const enriched = await Promise.all(placeIds.map((placeId: string) => {
+async function enrichPlaceIds(placeIds: string[]): Promise<object[]> {
+    const enriched: object[] = await Promise.all(placeIds.map(async (placeId: string) => {
         try {
-            busyHours(placeId, process.env.GOOGLE_KEY).then((data: any) => {
-                console.log(data);
-            });
+            return await getBusyHours(placeId, process.env.GOOGLE_KEY);
         } catch (err) {
-            console.log(err);
+            console.error(err);
         }
-        return { placeId: placeId };
+        return {};
     }));
-    console.log(enriched);
     return enriched;
 }
