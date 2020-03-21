@@ -6,7 +6,7 @@ Find out more about the integration of the Google Data Proxy into the Liveline A
 ## How to use?
 In order to use this API, clone this project to your local machine. Then navigate to the backend folder.
 
-Copy the `.env.example` file and name it `.env`. Open it and enter your Google API key. Note that the `.env` file will by ignored by git.
+Copy the `.env.example` file and name it `.env`. Open it and enter your Google API key. Note that the `.env` file will be ignored by git.
 
 In order to start the server run the following commands inside the backend folder:
 
