@@ -2,7 +2,7 @@ require('dotenv').config();
 import express from 'express';
 const app = express();
 import fetch from 'node-fetch';
-const busyHours = require('busyHours');
+const busyHours = require('busy-hours');
 
 app.get('/', (_req, res) => {
     res.send("This is our supermarket API, go to our GitHub page to find out more about this API");
