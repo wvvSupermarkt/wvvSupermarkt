@@ -1,0 +1,44 @@
+{
+    "supermarkets": [
+      {
+        "name": "LIDL",
+        "place_id": "ChIJO1QHaqRPqEcRJ1r5ccupsgg",
+        "formatted_address": "Glasower Str. 42, 12051 Berlin, Germany",
+        "occupancy": 1,
+        "aticles": [
+          {
+            "name": "Klopapier",
+            "hash": "012708",
+            "availability": 0,
+            "lastupdate": "2020-03-21T22:21+01:00"
+          },
+          {
+            "name": "Desinfektionsspray",
+            "hash": "283723",
+            "availability": 1,
+            "lastupdate": "2020-03-21T22:21+01:00"
+          }
+        ]
+      },
+      {
+        "name": "Netto",
+        "place_id": "ChIJ1dKDoZtPqEcRM1AThFC0IPk-wk88Z89zM8",
+        "formatted_address": "Hermannstraße 158A, 12051 Berlin, Germany",
+        "occupancy": 1,
+        "aticles": [
+          {
+            "name": "Taschentücher",
+            "hash": "012708",
+            "availability": 1,
+            "lastupdate": "2020-03-21T22:21+01:00"
+          },
+          {
+            "name": "Nudeln",
+            "hash": "283723",
+            "availability": 0,
+            "lastupdate": "2020-03-21T22:10+01:00"
+          }
+        ]
+      }
+    ]
+  }
