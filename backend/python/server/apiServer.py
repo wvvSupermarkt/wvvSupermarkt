@@ -25,13 +25,16 @@ def get_popTimesFromArea():
     point2 = request.args.get('p2')
     radius = request.args.get('radius')
 
-    print ('api_key' + api_key)
-    print ('placeType' + placeType)
+    print ('api_key ', api_key)
+    print ('placeType ',placeType)
+    print ('point1 ', point1)
 
 #    result = populartimes.get("your-api-key", ["bar"], (48.132986, 11.566126), (48.142199, 11.580047))
 
-    result = populartimes.get(api_key, [placeType], point1, point2)
-
+    #result = populartimes.get("AIzaSyAT8W6_CJ835UHlpuCjfxcxHrYf7Tecqtk", ["bar"], (48.132986, 11.566126), (48.142199, 11.580047))
+    result = populartimes.get_id(
+        "AIzaSyAT8W6_CJ835UHlpuCjfxcxHrYf7Tecqtk", "ChIJSYuuSx9awokRyrrOFTGg0GY")
+    print(result)
     return jsonify({'result': result})
 
 if __name__ == '__main__':
