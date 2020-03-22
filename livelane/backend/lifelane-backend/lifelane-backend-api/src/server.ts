@@ -11,7 +11,7 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.get('/supermarket/place', async (req, res) => {
+app.get('/supermarket/place', async (req, res, next) => {
   var lat = req.query.lat
   var long = req.query.long
   if (!(lat && long)) {
