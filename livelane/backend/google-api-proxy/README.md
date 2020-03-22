@@ -39,7 +39,7 @@ Example: `http://localhost:8080/google/supermarket/location?lat=49.315920&lon=8.
 ### /google/supermarket/placeId
 Get data for one single supermarket based on the given [placeId](https://developers.google.com/places/place-id?hl=de)
             
-      GET /supermarket/placeId?placeId=<placeId>
+      GET /google/supermarket/placeId?placeId=<placeId>
 
 Example: `http://localhost:8080/google/supermarket/placeId?placeId=ChIJmQpxb3-1l0cR4ku8vF1UQ4E`
 
