@@ -11,24 +11,11 @@ app.listen(PORT, () => {
 
 app.use('/', express.static('../frontend/webapp/index.html'));
 
-// app.get('/', (_req, res) => {
-//     res.send("This is our supermarket API, go to our GitHub page to find out more about this API");
-// });
-
-// app.get("/test", function (_req, res) {
-//     getBusyHours("ChIJMcjr-KO2l0cR-fUqy24AFgw", process.env.GOOGLE_KEY).then((data: any) => {
-//         console.log(data);
-//         res.send(data);
-//     }).catch((err: any) => {
-//         console.error(err);
-//         res.send(err);
-//     });
-// });
 
 ///////////////////////////
 // Multiple Supermarkets //
 ///////////////////////////
-app.get("/supermarkets/location", async (req, res) => {
+app.get("/google/supermarkets/location", async (req, res) => {
     const lat = req.query.lat;
     const lon = req.query.lon;
     if (!(lat && lon)) {
@@ -36,6 +23,7 @@ app.get("/supermarkets/location", async (req, res) => {
     }
     try {
         const data: object = await getPlacesByGeoData(lat, lon);
+        console.log(data)
         if (data === undefined) {
             res.send("There was an error while transmitting the data to the Google Places API");
         } else {
@@ -49,7 +37,7 @@ app.get("/supermarkets/location", async (req, res) => {
 /////////////////////
 // One Supermarket //
 /////////////////////
-app.get("/supermarket/location", async (req, res) => {
+app.get("/google/supermarket/location", async (req, res) => {
     const lat = req.query.lat;
     const lon = req.query.lon;
     if (!(lat && lon)) {
@@ -67,7 +55,7 @@ app.get("/supermarket/location", async (req, res) => {
     }
 });
 
-app.get("/supermarket/placeId", async (req, res) => {
+app.get("/google/supermarkets/place", async (req, res) => {
     const placeId = req.query.placeId;
     if (!placeId) {
         return res.status(442).json({ error: "You need to specify a placeId as query param" });

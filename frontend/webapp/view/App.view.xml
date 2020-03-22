@@ -1,8 +1,0 @@
-<mvc:View
-   controllerName="wvw.controller.App"
-   xmlns="sap.m"
-   xmlns:mvc="sap.ui.core.mvc"
-   xmlns:html="http://www.w3.org/1999/xhtml">
-    <!--<html:div id="map" style="height:100%"></html:div>-->
-    <HBox id="googleMap" height="500px" width="500px"></HBox>
-</mvc:View>

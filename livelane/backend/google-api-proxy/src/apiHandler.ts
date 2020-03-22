@@ -25,6 +25,10 @@ async function getPlaceIds(lat: number, lon: number): Promise<string[]> {
     try {
         const response = await fetch(baseUrl + params);
         const jsonData = await response.json();
+        console.log(jsonData)
+        if(jsonData.status == 'REQUEST_DENIED'){
+            throw new Error(jsonData.error_message)
+        }
         return extractPlaceIds(jsonData);
     } catch (err) {
         console.error(err);

@@ -1,7 +1,4 @@
-// Haversine implementation ?!
-// check this again, what about radiants are they considered in cosine-function when passing lat
-// where do these constants come from?
-// please explain
+// See https://www.kompf.de/gps/distcalc.html for details
 export function calculateDistance(lat1s: number | string, lon1s: number | string, lat2s: number | string, lon2s: number | string) {
     const lat1: number = (typeof lat1s === "string") ? parseFloat(lat1s) : lat1s;
     const lon1: number = (typeof lon1s === "string") ? parseFloat(lon1s) : lon1s;
