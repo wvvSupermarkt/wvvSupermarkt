@@ -13,6 +13,26 @@ header
     padding-top: 50px;
 }
 
+header span
+{
+    font-size: 20px;
+    font-weight: bold;
+    color: #007e7f;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#slogan
+{
+    float: left;
+    margin-left: 20px;
+}
+
+#socialdistancing
+{
+    float: right;
+    margin-right: 20px;
+}
+
 .img-wrapper
 {
     width: 270px;
@@ -61,6 +81,7 @@ footer
     }
 }
 
+/*QR*/
 #qr
 {
     height: 350px;
@@ -97,6 +118,7 @@ footer
     box-shadow: 0em 0em 3px black;
 }
 
+/*MEDIA*/
 @media only screen and (max-width: 1200px)
 {
     #faq
@@ -131,5 +153,10 @@ footer
     #wirvsvirus
     {
         display:none;
+    }
+    
+    header span
+    {
+        display: none;
     }
 }
