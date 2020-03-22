@@ -6,7 +6,7 @@ Find out more about the integration of the Google Data Proxy (REST4) into the Li
 ## How to use?
 In order to use this API, clone this project to your local machine. Then navigate to the backend folder.
 
-Copy the `.env.example` file and name it `.env`. Open it and enter your Google API key. Note that the `.env` file will be ignored by git.
+Create an `.env` file in your local environment and fill it like described [here](https://github.com/wvvSupermarkt/wvvSupermarkt/blob/master/livelane/backend/google-api-proxy/README.md#paste-your-api_key-in-a-env-file)
 
 In order to start the server run the following commands inside the backend folder:
 
