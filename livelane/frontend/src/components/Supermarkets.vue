@@ -52,7 +52,7 @@ export default {
   mounted() {
     axios
       .get(
-        "http://localhost:3000/supermarket/place/?lat=49.3831945&long=8.3930197"
+        "https://api.livelane.de/supermarket/place/?lat=49.3831945&long=8.3930197"
       )
       .then(response => {
         this.supermarkets = response.data;
