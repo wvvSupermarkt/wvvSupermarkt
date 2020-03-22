@@ -17,9 +17,27 @@ app.get('/supermarket/place', async (req, res) => {
     var supermarket_list = await getSuperMarketList(lat, long);
     
     if (supermarket_list === undefined) {
-      res.send("There was an error while transmitting the data to the Google Places API");
+      res.send("There was an error while transmitting the data");
     } else {
       res.json(supermarket_list)
+    }
+  }
+  catch (err) {
+    res.status(500).json({ error: "Sorry, an internal server error occurred" });
+  }
+
+
+});
+app.get('/supermarket/allArticles', async (req, res) => {
+  
+  try {
+    
+    var allarticle_list = await getAllArticles();
+    
+    if (allarticle_list === undefined) {
+      res.send("There was an error while transmitting the data");
+    } else {
+      res.json(allarticle_list)
     }
   }
   catch (err) {
@@ -34,7 +52,13 @@ app.listen(3000, () =>
 );
 
 
-
+async function getAllArticles():Promise<interfaces.ArticleMin[]>{
+  var connection =await dbHandler.creatDB();
+  var allArticles=await dbHandler.getAllArticlesFromDb(connection)
+  
+  connection.end();
+  return allArticles
+}
 function getGoogleDataRest4place_id(place_id: number): interfaces.SupermarketGoogle[] {
 
   var contents = fs.readFileSync('', 'utf8');
