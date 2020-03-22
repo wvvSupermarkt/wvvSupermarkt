@@ -1,5 +1,11 @@
 import mysql from 'promise-mysql';
 import * as interfaces from "./interfaces";
+import * as fs from "fs";
+var dbconfig = JSON.parse(fs.readFileSync('dbconfig.json', 'utf8'));
+export async function creatDB(){
+  
+  return mysql.createConnection(dbconfig);
+}
 export async function getCapacityOfSupermarket(place_id: string,connection:mysql.Connection): Promise<number> {
     
     var sql='select occupancy FROM supermarket WHERE place_id = ?;'
@@ -34,12 +40,22 @@ export async function getCapacityOfSupermarket(place_id: string,connection:mysql
    
     return articles
   }
-  export async function creatDB(){
-      return mysql.createConnection({
-    host: 'pc',
-    user: 'philipp',
-    password: 'phipi-a@2',
-    database: "dbo"
 
-  });
+export async function getAllArticlesFromDb(connection:mysql.Connection): Promise<interfaces.ArticleMin[]> {
+  
+  var sql='select name, hash FROM article';
+  var rows= await connection.query(sql);
+  
+  if(rows===undefined){
+    return rows
+  }
+  var articles: interfaces.ArticleMin[]=[]
+ for (const row of rows) {
+   articles.push({
+     name:row.name,
+     hash:row.hash
+   })
+ }
+ console.log(articles)
+  return articles
 }

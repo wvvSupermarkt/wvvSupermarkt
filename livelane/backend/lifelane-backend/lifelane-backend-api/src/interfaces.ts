@@ -32,7 +32,7 @@ export interface CapacityHour {
     occupancy: number;
     articles: Array<Article>
   }
-  export interface Person {
+  export interface ArticleMin {
     name: string;
-    age: number;
+    hash: string;
   }

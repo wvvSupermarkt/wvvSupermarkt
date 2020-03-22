@@ -9,9 +9,13 @@ app.listen(PORT, () => {
     console.log('Listening on port: ' + PORT);
 });
 
-app.use('/', express.static('../frontend/webapp/index.html'));
-
-
+//app.use('/', express.static('../frontend/webapp/index.html'));
+const basicAuth = require('express-basic-auth')
+ 
+app.use(basicAuth({
+    users: { "admin": process.env.API_PASSWORD }
+    
+}))
 ///////////////////////////
 // Multiple Supermarkets //
 ///////////////////////////
