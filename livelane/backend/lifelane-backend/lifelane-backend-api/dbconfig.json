@@ -1,6 +1,6 @@
 {
-    "host": "hostname",
-    "user": "username",
+    "host": "host",
+    "user": "user",
     "password": "password",
     "database": "dbo"
     

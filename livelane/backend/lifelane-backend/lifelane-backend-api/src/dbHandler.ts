@@ -59,3 +59,13 @@ export async function getAllArticlesFromDb(connection:mysql.Connection): Promise
  console.log(articles)
   return articles
 }
+
+
+
+
+
+
+
+
+
+
