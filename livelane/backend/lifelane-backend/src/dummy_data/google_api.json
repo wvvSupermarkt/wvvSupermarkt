@@ -1,0 +1,191 @@
+[
+   {
+      "placeId": "ChIJmQpxb3-1l0cR4ku8vF1UQ4E",
+      "distance": 100, 
+      "name": "REWE",
+      "formatted_address": "Waldspitzweg 3, 67105 Schifferstadt, Germany",
+      "location": {
+         "lat": 49.3831945,
+         "lng": 8.3930197
+      },
+      "status": "ok",
+      "week": [
+         {
+            "day": "Sun",
+            "hours": []
+         },
+         {
+            "day": "Mon",
+            "hours": [
+               {
+                  "hour": 6,
+                  "percentage": 0
+               },
+               {
+                  "hour": 7,
+                  "percentage": 18
+               },
+               {
+                  "hour": 8,
+                  "percentage": 32
+               },
+               {
+                  "hour": 9,
+                  "percentage": 49
+               },
+               {
+                  "hour": 10,
+                  "percentage": 62
+               },
+               {
+                  "hour": 11,
+                  "percentage": 68
+               },
+               {
+                  "hour": 12,
+                  "percentage": 65
+               },
+               {
+                  "hour": 13,
+                  "percentage": 60
+               },
+               {
+                  "hour": 14,
+                  "percentage": 62
+               },
+               {
+                  "hour": 15,
+                  "percentage": 71
+               },
+               {
+                  "hour": 16,
+                  "percentage": 81
+               },
+               {
+                  "hour": 17,
+                  "percentage": 78
+               },
+               {
+                  "hour": 18,
+                  "percentage": 62
+               },
+               {
+                  "hour": 19,
+                  "percentage": 38
+               },
+               {
+                  "hour": 20,
+                  "percentage": 18
+               },
+               {
+                  "hour": 21,
+                  "percentage": 6
+               },
+               {
+                  "hour": 22,
+                  "percentage": 0
+               },
+               {
+                  "hour": 23,
+                  "percentage": 0
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "placeId": "ChIJO1QHaqRPqEcRJ1r5ccupsgg",
+      "distance": 100, 
+      "name": "REWE",
+      "formatted_address": "Waldspitzweg 3, 67105 Schifferstadt, Germany",
+      "location": {
+         "lat": 49.3831945,
+         "lng": 8.3930197
+      },
+      "status": "ok",
+      "week": [
+         {
+            "day": "Sun",
+            "hours": []
+         },
+         {
+            "day": "Mon",
+            "hours": [
+               {
+                  "hour": 6,
+                  "percentage": 0
+               },
+               {
+                  "hour": 7,
+                  "percentage": 18
+               },
+               {
+                  "hour": 8,
+                  "percentage": 32
+               },
+               {
+                  "hour": 9,
+                  "percentage": 49
+               },
+               {
+                  "hour": 10,
+                  "percentage": 62
+               },
+               {
+                  "hour": 11,
+                  "percentage": 68
+               },
+               {
+                  "hour": 12,
+                  "percentage": 65
+               },
+               {
+                  "hour": 13,
+                  "percentage": 60
+               },
+               {
+                  "hour": 14,
+                  "percentage": 62
+               },
+               {
+                  "hour": 15,
+                  "percentage": 71
+               },
+               {
+                  "hour": 16,
+                  "percentage": 81
+               },
+               {
+                  "hour": 17,
+                  "percentage": 78
+               },
+               {
+                  "hour": 18,
+                  "percentage": 62
+               },
+               {
+                  "hour": 19,
+                  "percentage": 38
+               },
+               {
+                  "hour": 20,
+                  "percentage": 18
+               },
+               {
+                  "hour": 21,
+                  "percentage": 6
+               },
+               {
+                  "hour": 22,
+                  "percentage": 0
+               },
+               {
+                  "hour": 23,
+                  "percentage": 0
+               }
+            ]
+         }
+      ]
+   }
+
+]
