@@ -1,8 +1,6 @@
 # Google Data Proxy (REST4)
 Find out more about the integration of the Google Data Proxy into the Liveline Application in the [Livelane Microservices Structure](https://docs.google.com/document/d/1RLdGLrOS8xFzT58jS5aggvNy8lCMdPbxYCEXZ2F2ziw/edit).
 
-> Note that this proxy is NOT fully functioning (21/03/2020, 21:09) because an error in the busyHours library still has to be fixed.
-
 ## How to use?
 In order to use this API, clone this project to your local machine. Then navigate to the backend folder.
 
@@ -27,7 +25,6 @@ for example: `http://localhost:8080/supermarkets?lat=49.315920&lon=8.432910`
 ### API Response
 This is an example for the API response you can expect:
 ```javascript
-
 [
    {
       "name": "REWE",
@@ -125,8 +122,6 @@ This is an example for the API response you can expect:
    ...
 ]
 ```
-
-
 
 ## How to set up for development?
 Clone the project to your local machine.
