@@ -15,7 +15,7 @@ Für die Gewinnung der Daten werden mehrere Datenquellen erfasst und ausgewertet
 
 Das Projekt ist als Mircoservice-Architektur entwickelt wurden, um eine einfache Erweiterung zu ermöglichen.
 ### * [Paxcounter](https://github.com/Manu3756/WifiDeviceCounter/blob/master/README.md)
-### * [Google-Data-Proxy](https://github.com/wvvSupermarkt/wvvSupermarkt/tree/master/backend/google-api-proxy)
+### * [Google-API-Proxy](https://github.com/wvvSupermarkt/wvvSupermarkt/tree/master/backend/google-api-proxy)
 ### * [Livelane Backend](https://github.com/wvvSupermarkt/wvvSupermarkt/tree/master/livelane/backend)
 ### * [WebApp](https://github.com/wvvSupermarkt/wvvSupermarkt/tree/master/livelane/frontend)
 
