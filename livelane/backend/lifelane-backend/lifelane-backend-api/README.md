@@ -17,7 +17,7 @@ In order to start the server run the following commands inside the backend folde
 ## API Endpoints
 ### /supermarket/place      
       GET /google/supermarkets/location?lat=<lat>&lon=<lon>
-Example: `http://localhost:8080/google/supermarkets/location?lat=49.315920&lon=8.432910`
+Example: `http://localhost:3000/supermarket/place\?lon\=13.431771\&lat\=52.466738`
 
 
 ### /supermarket/allArticles
@@ -28,7 +28,8 @@ This API is suited for you if you just want to retrieve the closest supermarket 
 Example: `/google/supermarket/supermarket/allArticles`
 
 ### API Response
-This is an example for the API response you can expect:
+This is an example for the API response you can expect: 
+`http://localhost:3000/supermarket/place\?lon\=13.431771\&lat\=52.466738`
 ```javascript
 [
   {
@@ -127,6 +128,20 @@ This is an example for the API response you can expect:
     "formatted_address": "Karl-Marx-Straße 231-235, 12055 Berlin, Germany",
     "occupancy": 1,
     "articles": []
+  }
+]
+```
+
+`http://localhost:3000/supermarket/allArticles`
+```javascript
+[
+  {
+    "name": "Taschentücher",
+    "hash": 2134
+  },
+  {
+    "name": "Klopapier",
+    "hash": 2132
   }
 ]
 ```
