@@ -1,8 +1,6 @@
 ![wirvsVirus](https://github.com/wvvSupermarkt/wvvSupermarkt/blob/master/wvv.png)
 
-
-
-# Livelane
+# Livelane #WirVsVirus
 Während einer Pandemie ist es wichtig möglichst wenig sozialen Kontakt zu haben. Eine Herausforderung stellt hier das Einkaufen dar. Supermärkte müssen die Anzahl der Kunden, die einen Markt gleichzeitig betreten, beschränken. Dadurch enstehen Warteschlangen. Livelane zeigt dir für die Läden in deiner Umgebung einen Indikator für die Auslastung des Supermarktes.
 
 Zusätzlich können Kunden einzelne Produkte markieren die nicht mehr verfügbar sind, dadurch werden unnötige Wege vermieden.
