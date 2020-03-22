@@ -14,16 +14,16 @@
         <v-container fluid>
           <v-row justify="center" class="mb-1">
             <v-col :lg="3" justify="center" align="center">
-              <v-icon color="#007e7f">house</v-icon>
+              <i class="icon-livelane_mobil_icons_home"></i>
             </v-col>
             <v-col :lg="3" align="center">
-              <v-icon color="#007e7f">place</v-icon>
+              <i class="icon-livelane_mobil_icons_map"></i>
             </v-col>
              <v-col :lg="3" align="center">
-              <v-icon color="#007e7f">search</v-icon>
+              <i class="icon-livelane_mobil_icons_search"></i>
             </v-col>
             <v-col :lg="3" align="center">
-              <v-icon color="#007e7f">camera</v-icon>
+              <i class="icon-livelane_mobil_icons_qr"></i>
             </v-col>
             
           </v-row>
@@ -52,5 +52,14 @@ export default {
 <style scoped>
 body {
   font-family: "Montserrat";
+}
+i {
+
+    font-size: 1.9rem;
+    color: rgba(0, 126, 127, 1);
+
+}
+.v-footer .container{
+  padding:0px;
 }
 </style>

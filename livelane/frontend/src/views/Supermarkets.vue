@@ -17,3 +17,9 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+    .supermarkets{
+        font-family: 'Montserrat';
+    }
+</style>

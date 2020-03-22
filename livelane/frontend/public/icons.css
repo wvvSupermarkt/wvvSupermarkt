@@ -1,0 +1,66 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?tlb7p9');
+  src:  url('fonts/icomoon.eot?tlb7p9#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?tlb7p9') format('truetype'),
+    url('fonts/icomoon.woff?tlb7p9') format('woff'),
+    url('fonts/icomoon.svg?tlb7p9#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-livelane_mobil_icons_home:before {
+  content: "\e900";
+}
+.icon-livelane_mobil_icons_map:before {
+  content: "\e901";
+}
+.icon-livelane_mobil_icons_menu:before {
+  content: "\e902";
+}
+.icon-livelane_mobil_icons_qr:before {
+  content: "\e903";
+}
+.icon-livelane_mobil_icons_search:before {
+  content: "\e904";
+}
+.icon-livelane_mobil_icons_trash:before {
+  content: "\e905";
+}
+.icon-livelane_mobil_icons_warnunggruen:before {
+  content: "\e906";
+}
+.icon-livelane_mobil_icons_warnungorange:before {
+  content: "\e907";
+}
+.icon-livelane_mobil_icons_warnungrot:before {
+  content: "\e908";
+}
+.icon-livelane_mobil_icons_x:before {
+  content: "\e909";
+}
+.icon-livelane_mobil_icons_zeitgruen:before {
+  content: "\e90a";
+}
+.icon-livelane_mobil_icons_zeitorange:before {
+  content: "\e90b";
+}
+.icon-livelane_mobil_icons_zeitrot:before {
+  content: "\e90c";
+}

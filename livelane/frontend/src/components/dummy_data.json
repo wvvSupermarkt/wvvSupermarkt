@@ -24,7 +24,27 @@
         "name": "Netto",
         "place_id": "ChIJ1dKDoZtPqEcRM1AThFC0IPk-wk88Z89zM8",
         "formatted_address": "Hermannstraße 158A, 12051 Berlin, Germany",
-        "occupancy": 1,
+        "occupancy": 3,
+        "aticles": [
+          {
+            "name": "Taschentücher",
+            "hash": "012708",
+            "availability": 1,
+            "lastupdate": "2020-03-21T22:21+01:00"
+          },
+          {
+            "name": "Nudeln",
+            "hash": "283723",
+            "availability": 0,
+            "lastupdate": "2020-03-21T22:10+01:00"
+          }
+        ]
+      },
+      {
+        "name": "Netto",
+        "place_id": "ChIJ1dKDoZtPqEcRM1AThFC0IPk-wk88Zddd89zM8",
+        "formatted_address": "Hermannstraße 158A, 12051 Berlin, Germany",
+        "occupancy": 2,
         "aticles": [
           {
             "name": "Taschentücher",
@@ -40,5 +60,6 @@
           }
         ]
       }
+      
     ]
   }
