@@ -1,6 +1,8 @@
 ![Google-API-Proxy-Titelbild](https://user-images.githubusercontent.com/37160523/77240094-46a1a100-6be2-11ea-80f1-86ffc4cfb7af.jpg)
 Find out more about the integration of the Google Data Proxy (REST4) into the Liveline Application in the [Livelane Microservices Structure](https://docs.google.com/document/d/1RLdGLrOS8xFzT58jS5aggvNy8lCMdPbxYCEXZ2F2ziw/edit).
 
+[Node.js](https://nodejs.org/de/download/) needs to be installed on your machine before you can go on.
+
 ## How to use?
 In order to use this API, clone this project to your local machine. Then navigate to the backend folder.
 
