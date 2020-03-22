@@ -1,19 +1,8 @@
-# frontend
+# Livelane App :iphone:
+## Install
+- Clone Repository
+- Move to livelane/frontend/
+- npm install
+- npm run serve
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+:tada: Now you can open your App on http://localhost:8080/
