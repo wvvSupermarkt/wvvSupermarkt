@@ -26,6 +26,12 @@ Das Projekt ist als Mircoservice-Architektur entwickelt wurden, um eine einfache
 ![Overview](https://github.com/wvvSupermarkt/wvvSupermarkt/blob/master/overview.PNG)
 
 
-## Preview
-![Preview](https://github.com/wvvSupermarkt/wvvSupermarkt/blob/master/Bildschirmfoto_2020-03-21_um_23.03.34.png)
+## UI Mockup
+![UI Mockup](https://user-images.githubusercontent.com/37160523/77251999-e8140b80-6c51-11ea-8e66-03b3842de637.png)
 
+Einzelansichten:
+- [Karte](https://user-images.githubusercontent.com/37160523/77251816-d5e59d80-6c50-11ea-9afc-f8f9b7ec2590.jpg)
+- [QR](https://user-images.githubusercontent.com/37160523/77251818-d8e08e00-6c50-11ea-8410-ae2bc89812d5.jpg)
+- [Shopseite](https://user-images.githubusercontent.com/37160523/77251819-daaa5180-6c50-11ea-9cc2-460a6d68de7d.jpg)
+- [Start](https://user-images.githubusercontent.com/37160523/77251822-dc741500-6c50-11ea-9b61-2eb5cc7c3efc.jpg)
+- [Suche](https://user-images.githubusercontent.com/37160523/77251824-ded66f00-6c50-11ea-98c2-bd9c043e6d0c.jpg)
