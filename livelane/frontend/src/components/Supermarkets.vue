@@ -1,5 +1,18 @@
 <template>
-  <v-container>
+   
+  <v-container fluid>
+    <v-toolbar color="#ededed" elevation="0">
+        <v-text-field
+            label="Suche"
+            single-line
+            solo
+            flat
+            dense 
+            style="font-weight:600;color:rgba(237, 237, 237, 0.4);"
+          ></v-text-field>
+    </v-toolbar>
+   
+
     <v-simple-table>
       <thead>
         <tr>
@@ -38,3 +51,9 @@ export default {
   })
 };
 </script>
+
+<style scoped>
+.container.container--fluid{
+    padding:0;
+}
+</style>
