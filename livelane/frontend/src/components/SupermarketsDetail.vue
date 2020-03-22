@@ -17,7 +17,10 @@
       <v-col :lg="12">
         <h4>Liste fehlender Produkte</h4>
         <ul>
-          <li v-for="article in supermarket.aticles" :key="article.hash">{{article.name}} <span style="color:red;">X</span></li>
+          <li v-for="article in supermarket.articles" :key="article.hash">
+            {{article.name}}
+            <span style="color:red;">X</span>
+          </li>
         </ul>
       </v-col>
     </v-row>
@@ -30,8 +33,11 @@ export default {
   name: "SupermarketsDetail",
 
   data: () => ({
-    supermarket: supermarkets_json.supermarkets[0]
+    supermarket: {}
   }),
+  mounted () {
+      this.supermarket = this.$route.params.supermarketdetails
+  },
   methods: {
     getOccupancyIcon(occupancy) {
       if (occupancy === 1) {
@@ -51,7 +57,8 @@ export default {
       } else {
         return "icon-livelane_mobil_icons_warnungrot";
       }
-    }
+    },
+ 
   }
 };
 </script>

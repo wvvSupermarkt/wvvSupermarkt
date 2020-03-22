@@ -9,8 +9,16 @@
       <br />OB PRODUKTE
       <br />FEHLEN.
     </h1>
-<br />
-    <v-btn large extended color="#007e7f" class="btn-search" style="color:white;font-weight:600!important;">Primary</v-btn>
+    <br />
+    <router-link :to="{name: 'Supermarkets'}">
+      <v-btn
+        large
+        extended
+        color="#007e7f"
+        class="btn-search"
+        style="color:white;font-weight:600!important;"
+      >Suchen...</v-btn>
+    </router-link>
   </div>
 </template>
 
@@ -24,29 +32,26 @@ export default {
 </script>
 
 <style scoped>
-
-
 h1 {
   font-weight: semi-bold;
   color: rgba(0%, 0%, 0%, 40%);
   font-size: 40px;
-  line-height:1.2;
-  letter-spacing:0.5pt;
+  line-height: 1.2;
+  letter-spacing: 0.5pt;
 }
 
 .home {
-  padding:10px;
+  padding: 10px;
 }
 
-.v-btn.btn-search span{
-  color:white;
-  font-weight:semi-bold;
+.v-btn.btn-search span {
+  color: white;
+  font-weight: semi-bold;
 }
 
-.v-btn.v-size--default, .v-btn.v-size--large {
-
-    font-size: 1.375rem;
-    font-weight: 900;
-
+.v-btn.v-size--default,
+.v-btn.v-size--large {
+  font-size: 1.375rem;
+  font-weight: 900;
 }
 </style>

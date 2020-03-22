@@ -1,8 +1,6 @@
 <template>
   <div class="supermarkets">
-    <v-card max-width="500" class="mx-auto">
-      <Supermarkets />
-    </v-card>
+    <Supermarkets />
   </div>
 </template>
 
@@ -19,7 +17,7 @@ export default {
 </script>
 
 <style scoped>
-    .supermarkets{
-        font-family: 'Montserrat';
-    }
+.supermarkets {
+  font-family: "Montserrat";
+}
 </style>

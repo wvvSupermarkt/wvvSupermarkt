@@ -14,18 +14,21 @@
         <v-container fluid>
           <v-row justify="center" class="mb-1">
             <v-col :lg="3" justify="center" align="center">
-              <i class="icon-livelane_mobil_icons_home"></i>
+              <router-link :to="{name: 'Home'}">
+                <i class="icon-livelane_mobil_icons_home"></i>
+              </router-link>
             </v-col>
             <v-col :lg="3" align="center">
               <i class="icon-livelane_mobil_icons_map"></i>
             </v-col>
-             <v-col :lg="3" align="center">
-              <i class="icon-livelane_mobil_icons_search"></i>
+            <v-col :lg="3" align="center">
+              <router-link :to="{name: 'Supermarkets'}">
+                <i class="icon-livelane_mobil_icons_search"></i>
+              </router-link>
             </v-col>
             <v-col :lg="3" align="center">
               <i class="icon-livelane_mobil_icons_qr"></i>
             </v-col>
-            
           </v-row>
         </v-container>
       </v-footer>
@@ -54,12 +57,10 @@ body {
   font-family: "Montserrat";
 }
 i {
-
-    font-size: 1.9rem;
-    color: rgba(0, 126, 127, 1);
-
+  font-size: 1.9rem;
+  color: rgba(0, 126, 127, 1);
 }
-.v-footer .container{
-  padding:0px;
+.v-footer .container {
+  padding: 0px;
 }
 </style>
