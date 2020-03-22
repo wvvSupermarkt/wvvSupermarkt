@@ -19,19 +19,29 @@ or
       yarn start
 
 ## API Endpoints
-### /supermarkets
+### /supermarkets/location
 Get data for all supermarkets in the range of 3km around the specified coordinates (latitude, longitude). You will get an array of objects, sorted by distance in ascending order (first element is closet to the given coordinates).
             
-      GET /supermarkets?lat=<lat>&lon=<lon>
+      GET /supermarkets/location?lat=<lat>&lon=<lon>
 
-Example: `http://localhost:8080/supermarkets?lat=49.315920&lon=8.432910`
+Example: `http://localhost:8080/supermarkets/location?lat=49.315920&lon=8.432910`
 
-### /supermarket
-Get data for one supermarket based on the given [placeId](https://developers.google.com/places/place-id?hl=de)
+### /supermarkets/placeId
+Not yet implemented
+
+### /supermarket/location
+This API is suited for you if you just want to retrieve the closest supermarket in the range of 3km around the specified coordinates (latitude, longitude). Note that the output should be equal to the first element of `/supermarkets/location`. That's why you could also call `/supermarkets/location` and just work with the first element of the array of objects. However, this endpoint has less overhead (reduces API calls to Google Places API) and is thus to be preferred when only dealing with the closet supermarket.
+
+      GET /supermarket/location?lat=<lat>&lon=<lon>
+
+Example: `http://localhost:8080/supermarket/location?lat=49.315920&lon=8.432910`
+
+### /supermarket/placeId
+Get data for one single supermarket based on the given [placeId](https://developers.google.com/places/place-id?hl=de)
             
-      GET /supermarket?placeId=<placeId>
+      GET /supermarket/placeId?placeId=<placeId>
 
-Example: `http://localhost:8080/supermarket?placeId=ChIJmQpxb3-1l0cR4ku8vF1UQ4E`
+Example: `http://localhost:8080/supermarket/placeId?placeId=ChIJmQpxb3-1l0cR4ku8vF1UQ4E`
 
 ### API Response
 This is an example for the API response you can expect:
