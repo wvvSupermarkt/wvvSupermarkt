@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="indicator.css">
+        <link href="https://fonts.googleapis.com/css?family=Baloo+Da+2&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="img-wrapper">
+                <img src="livelane.svg">
+            </div>
+        </header>
+        <div id="content">
+            <div id="status">
+                <p>Warteschlangenstand</p>
+                <div class="light" id="empty"><input type="button"><small>Leer</small></div>
+                <div class="light" id="medium"><input type="button"><small>Mittel</small></div>
+                <div class="light" id="full"><input type="button"><small>Voll</small></div>
+                <div class="indicator">Lange Schlange!</div>
+            </div>
+
+            <div id="products">
+                <p>Lebensmittel, die fehlen</p>
+                <div class="indicator"><a href="missing.html">Etwas fehlt...</a></div>
+                <div id="list">
+                    <dl>
+                        <dt>Brot</dt>
+                        <dd>vor 5min</dd>
+                        <dt>Toilettenpapier</dt>
+                        <dd>vor 5min</dd>
+                        <dt>Mehl</dt>
+                        <dd>vor 5min</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <nav>
+                <ul>
+                    <li>Impressum</li>
+                    <li>Kontakt</li>
+                    <li>Pipapo</li>
+                </ul>
+            </nav>
+        </footer>
+    </body>
+</html>

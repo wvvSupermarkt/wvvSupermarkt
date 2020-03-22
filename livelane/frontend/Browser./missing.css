@@ -1,0 +1,42 @@
+#content
+{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*Suchleiste*/
+#productlist
+{
+    width: 70%;
+    height: 30px;
+    margin-bottom: 50px;
+}
+
+
+/*Submit*/
+#submit
+{
+    display: block;
+    width: 200px;
+    height: 50px;
+    border: none;
+    background-color: #daff91;
+    margin: auto;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+#submit:hover
+{
+    background-color: #ccf086;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+footer li
+{
+    display: inline-block;
+    margin-left: 30px;
+}
