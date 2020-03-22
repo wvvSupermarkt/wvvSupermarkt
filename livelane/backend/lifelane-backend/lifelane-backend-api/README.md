@@ -28,7 +28,8 @@ This API is suited for you if you just want to retrieve the closest supermarket 
 Example: `/google/supermarket/supermarket/allArticles`
 
 ### API Response
-This is an example for the API response you can expect: 
+This is an example for the API response you can expect:
+
 `http://localhost:3000/supermarket/place\?lon\=13.431771\&lat\=52.466738`
 ```javascript
 [
