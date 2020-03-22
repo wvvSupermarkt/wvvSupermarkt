@@ -6,7 +6,7 @@ Find out more about the integration of the LIVELANE BACKEND (REST3) into the Liv
 [Node.js](https://nodejs.org/de/download/) needs to be installed on your machine before you can go on.
 
 ## How to use?
-In order to use this API, clone this project to your local machine. Edit the file /dbconf.json whith the access data of your MySQL database. 
+In order to use this API, clone this project to your local machine. Edit the file /dbconf.json and /google_confg.json whith the access data of your MySQL database and Google API.
 In order to start the server run the following commands inside the backend folder:
 
       npm install
