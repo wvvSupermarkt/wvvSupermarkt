@@ -18,15 +18,28 @@ or
       yarn build
       yarn start
 
-### Query
-**Consume the Supermarkets API via this URL**: `localhost:<port>/supermarkets?lat=<lat>&lon=<lon>`,<br>
-for example: `http://localhost:8080/supermarkets?lat=49.315920&lon=8.432910`
+## API Endpoints
+### /supermarkets
+Get data for all supermarkets in the range of 3km around the specified coordinates (latitude, longitude). You will get an array of objects, sorted by distance in ascending order (first element is closet to the given coordinates).
+            
+      GET /supermarkets?lat=<lat>&lon=<lon>
+
+Example: `http://localhost:8080/supermarkets?lat=49.315920&lon=8.432910`
+
+### /supermarket
+Get data for one supermarket based on the given [placeId](https://developers.google.com/places/place-id?hl=de)
+            
+      GET /supermarket?placeId=<placeId>
+
+Example: `http://localhost:8080/supermarket?placeId=ChIJmQpxb3-1l0cR4ku8vF1UQ4E`
 
 ### API Response
 This is an example for the API response you can expect:
 ```javascript
 [
    {
+      "placeId": "ChIJmQpxb3-1l0cR4ku8vF1UQ4E",
+      "distance": 100, (optional)
       "name": "REWE",
       "formatted_address": "Waldspitzweg 3, 67105 Schifferstadt, Germany",
       "location": {
