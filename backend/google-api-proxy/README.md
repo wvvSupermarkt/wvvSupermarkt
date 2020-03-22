@@ -1,4 +1,4 @@
-# Google Data Proxy (REST4)
+# Google API Proxy (REST4)
 Find out more about the integration of the Google Data Proxy into the Liveline Application in the [Livelane Microservices Structure](https://docs.google.com/document/d/1RLdGLrOS8xFzT58jS5aggvNy8lCMdPbxYCEXZ2F2ziw/edit).
 
 ## How to use?
