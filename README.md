@@ -27,7 +27,7 @@ Das Projekt ist als Mircoservice-Architektur entwickelt wurden, um eine einfache
 
 
 ## UI Mockup
-![UI Mockup](https://user-images.githubusercontent.com/37160523/77251999-e8140b80-6c51-11ea-8e66-03b3842de637.png)
+![UI Mockup Overview](https://user-images.githubusercontent.com/37160523/77252909-50b1b700-6c57-11ea-9de0-1c111a5cb92b.png)
 
 Einzelansichten:
 - [Karte](https://user-images.githubusercontent.com/37160523/77251816-d5e59d80-6c50-11ea-9afc-f8f9b7ec2590.jpg)
