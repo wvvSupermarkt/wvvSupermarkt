@@ -10,6 +10,12 @@ export async function getPlacesByGeoData(lat: number, lon: number): Promise<obje
     return placeIdsEnriched;
 }
 
+export async function getPlaceByGeoData(lat: number, lon: number): Promise<object> {
+    const placeIds: string[] = await getPlaceIds(lat, lon);
+    const firstPlaceIdEnriched = await enrichPlaceId(placeIds[0], lat, lon);
+    return firstPlaceIdEnriched;
+}
+
 //////////////////////////////////////////
 // Google Places API (directly via URL) //
 //////////////////////////////////////////
@@ -38,19 +44,19 @@ function extractPlaceIds(jsonData: any): string[] {
 // Google Places API (indirectly via npm-module busy-hours) //
 //////////////////////////////////////////////////////////////
 async function enrichPlaceIds(placeIds: string[], lat: number, lon: number): Promise<object[]> {
-    const enriched: object[] = await Promise.all(placeIds.map(async (placeId: string) => {
-        try {
-            // return await getBusyHours(placeId, process.env.GOOGLE_KEY);
-            return getTrafficByPlaceId(placeId, lat, lon);
-        } catch (err) {
-            console.error(err);
-        }
-        return {};
-    }));
-    return enriched;
+    return await Promise.all(placeIds.map(async (placeId: string) => enrichPlaceId(placeId, lat, lon)));
 }
 
-export function getTrafficByPlaceId(placeId: string, lat?: number, lon?: number): Promise<any> {
+function enrichPlaceId(placeId: string, lat: number, lon: number): Promise<object> {
+    try {
+        return getTrafficByPlaceId(placeId, lat, lon);
+    } catch (err) {
+        console.error(err);
+        return Promise.resolve({});
+    }
+}
+
+export function getTrafficByPlaceId(placeId: string, lat?: number, lon?: number): Promise<object> {
     return new Promise((resolve: any, reject: any) => {
         try {
             getBusyHours(placeId, process.env.GOOGLE_KEY).then((data: any) => {
