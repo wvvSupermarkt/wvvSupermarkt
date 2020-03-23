@@ -12,4 +12,7 @@ jobs:
     - stage: build livelane-google-proxy
       script:
       - docker build -t wvvsupermarkt/google-api-proxy ./livelane/backend/google-api-proxy
+    - stage: build livelane-backend-api
+      script:
+      - docker build -t wvvsupermarkt/livelane-backend-api ./livelane/backend/livelane-backend
 
