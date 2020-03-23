@@ -1,7 +1,14 @@
+require('dotenv').config();
 import mysql from 'promise-mysql';
 import * as interfaces from "./interfaces";
 import * as fs from "fs";
-var dbconfig = JSON.parse(fs.readFileSync('dbconfig.json', 'utf8'));
+var dbconfig = {
+  "host": process.env.DB_HOST,
+  "port": process.env.DB_PORT || 3306,
+  "user": process.env.DB_USER,
+  "password": process.env.DB_PASSWORD,
+  "database": process.env.DB_DATABASE
+}
 export async function creatDB(){
   
   return mysql.createConnection(dbconfig);
