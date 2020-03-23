@@ -1,5 +1,9 @@
 dist: buster
-
+branches:
+  only:
+   - production
+   - development
+   - docker
 jobs:
   include:
     - stage: build docker image
