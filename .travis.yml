@@ -6,13 +6,9 @@ branches:
    - docker
 jobs:
   include:
-    - stage: build livelane-app
+    - stage: build docker images
       script:
       - docker build -t wvvsupermarkt/livelane-app ./livelane/frontend
-    - stage: build livelane-google-proxy
-      script:
       - docker build -t wvvsupermarkt/google-api-proxy ./livelane/backend/google-api-proxy
-    - stage: build livelane-backend-api
-      script:
       - docker build -t wvvsupermarkt/livelane-backend-api ./livelane/backend/livelane-backend
 
