@@ -3,7 +3,7 @@ FROM node:13
 WORKDIR /usr/src/google-api-proxy 
 COPY package*.json ./
 
-RUN npm ci --only=production
+RUN npm install
 
 COPY . . 
 RUN npm run build
