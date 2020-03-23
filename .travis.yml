@@ -1,0 +1,7 @@
+dist: buster
+
+jobs:
+  include:
+    - stage: build docker image
+      script:
+      - docker build -t wvvsupermarkt/livelane-app ./livelane/frontend
