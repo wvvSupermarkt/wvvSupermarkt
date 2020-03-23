@@ -1,0 +1,15 @@
+dist: buster
+branches:
+  only:
+   - production
+   - development
+   - docker
+jobs:
+  include:
+    - stage: build livelane-app
+      script:
+      - docker build -t wvvsupermarkt/livelane-app ./livelane/frontend
+    - stage: build livelane-google-proxy
+      script:
+      - docker build -t wvvsupermarkt/google-api-proxy ./livelane/backend/google-api-proxy
+

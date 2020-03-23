@@ -155,6 +155,7 @@ sample .env file
 ``` 
 PORT=8080
 GOOGLE_KEY=<your Key>
+API_PASSWORD=<your api password>
 ```
 ### Run the following commands inside the backend folder:
 
