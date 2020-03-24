@@ -7,6 +7,7 @@ branches:
 jobs:
   include:
     - stage: build docker images
+      if: branch != production
       script:
       - docker build -t livelane-webapp ./livelane/frontend
       - docker build -t livelane-google-api-proxy ./livelane/backend/google-api-proxy
