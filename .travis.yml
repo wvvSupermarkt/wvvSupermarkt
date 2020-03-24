@@ -8,7 +8,21 @@ jobs:
   include:
     - stage: build docker images
       script:
-      - docker build -t wvvsupermarkt/livelane-app ./livelane/frontend
-      - docker build -t wvvsupermarkt/google-api-proxy ./livelane/backend/google-api-proxy
-      - docker build -t wvvsupermarkt/livelane-backend-api ./livelane/backend/livelane-backend
-
+      - docker build -t livelane-webapp ./livelane/frontend
+      - docker build -t livelane-google-api-proxy ./livelane/backend/google-api-proxy
+      - docker build -t livelane-backend-api ./livelane/backend/livelane-backend
+    
+    - stage: build docker images and push
+      if: branch = production
+      script:
+      - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+      - docker build -t livelane-webapp ./livelane/frontend
+      - docker build -t livelane-google-api-proxy ./livelane/backend/google-api-proxy
+      - docker build -t livelane-backend-api ./livelane/backend/livelane-backend
+      - docker images
+      - docker tag livelane-webapp livelane/livelane-webapp
+      - docker tag livelane-google-api-proxy livelane/livelane-google-api-proxy
+      - docker tag livelane-backend-api livelane/livelane-backend-api
+      - docker push livelane/livelane-webapp
+      - docker push livelane/livelane-google-api-proxy
+      - docker push livelane/livelane-backend-api
